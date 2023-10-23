@@ -12,6 +12,9 @@
 		9775E4B82AE6C37D0004A5BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B72AE6C37D0004A5BB /* Item.swift */; };
 		9775E4BA2AE6C37F0004A5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4B92AE6C37F0004A5BB /* Assets.xcassets */; };
 		9775E4BD2AE6C37F0004A5BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */; };
+		9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4C92AE6C75B0004A5BB /* ButtonText.swift */; };
+		9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4CC2AE6C7850004A5BB /* Spacing.swift */; };
+		9775E4CF2AE6C78E0004A5BB /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4CE2AE6C78E0004A5BB /* Radius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		9775E4B72AE6C37D0004A5BB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9775E4B92AE6C37F0004A5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9775E4C92AE6C75B0004A5BB /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
+		9775E4CC2AE6C7850004A5BB /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		9775E4CE2AE6C78E0004A5BB /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,10 @@
 		9775E4B22AE6C37D0004A5BB /* e-commerce-app-ios17 */ = {
 			isa = PBXGroup;
 			children = (
+				9775E4C82AE6C74B0004A5BB /* DesignSystem */,
+				9775E4C72AE6C7450004A5BB /* Models */,
+				9775E4C62AE6C7400004A5BB /* Views */,
+				9775E4C52AE6C7390004A5BB /* ViewModels */,
 				9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */,
 				9775E4B52AE6C37D0004A5BB /* ContentView.swift */,
 				9775E4B72AE6C37D0004A5BB /* Item.swift */,
@@ -68,6 +78,45 @@
 				9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9775E4C52AE6C7390004A5BB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9775E4C62AE6C7400004A5BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9775E4C72AE6C7450004A5BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9775E4C82AE6C74B0004A5BB /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				9775E4CB2AE6C75F0004A5BB /* Buttons */,
+				9775E4CC2AE6C7850004A5BB /* Spacing.swift */,
+				9775E4CE2AE6C78E0004A5BB /* Radius.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		9775E4CB2AE6C75F0004A5BB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9775E4C92AE6C75B0004A5BB /* ButtonText.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */,
 				9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */,
+				9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */,
 				9775E4B82AE6C37D0004A5BB /* Item.swift in Sources */,
 				9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */,
+				9775E4CF2AE6C78E0004A5BB /* Radius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
