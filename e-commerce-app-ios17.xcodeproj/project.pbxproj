@@ -15,6 +15,8 @@
 		9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4C92AE6C75B0004A5BB /* ButtonText.swift */; };
 		9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4CC2AE6C7850004A5BB /* Spacing.swift */; };
 		9775E4CF2AE6C78E0004A5BB /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4CE2AE6C78E0004A5BB /* Radius.swift */; };
+		9775E4D12AE6C9EF0004A5BB /* ButtonSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D02AE6C9EF0004A5BB /* ButtonSymbol.swift */; };
+		9775E4D32AE6CAB20004A5BB /* ButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D22AE6CAB20004A5BB /* ButtonImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		9775E4C92AE6C75B0004A5BB /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
 		9775E4CC2AE6C7850004A5BB /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		9775E4CE2AE6C78E0004A5BB /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
+		9775E4D02AE6C9EF0004A5BB /* ButtonSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSymbol.swift; sourceTree = "<group>"; };
+		9775E4D22AE6CAB20004A5BB /* ButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				9775E4C92AE6C75B0004A5BB /* ButtonText.swift */,
+				9775E4D02AE6C9EF0004A5BB /* ButtonSymbol.swift */,
+				9775E4D22AE6CAB20004A5BB /* ButtonImage.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -189,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9775E4D12AE6C9EF0004A5BB /* ButtonSymbol.swift in Sources */,
 				9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */,
 				9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */,
+				9775E4D32AE6CAB20004A5BB /* ButtonImage.swift in Sources */,
 				9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */,
 				9775E4B82AE6C37D0004A5BB /* Item.swift in Sources */,
 				9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */,
