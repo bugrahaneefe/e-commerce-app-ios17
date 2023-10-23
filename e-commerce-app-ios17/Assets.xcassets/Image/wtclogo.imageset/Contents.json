@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "wtclogo.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "wtclogo@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "wtclogo@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "wtclogo.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

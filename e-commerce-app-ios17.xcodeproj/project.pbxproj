@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */; };
 		9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B52AE6C37D0004A5BB /* ContentView.swift */; };
-		9775E4B82AE6C37D0004A5BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B72AE6C37D0004A5BB /* Item.swift */; };
 		9775E4BA2AE6C37F0004A5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4B92AE6C37F0004A5BB /* Assets.xcassets */; };
 		9775E4BD2AE6C37F0004A5BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */; };
 		9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4C92AE6C75B0004A5BB /* ButtonText.swift */; };
@@ -17,13 +16,16 @@
 		9775E4CF2AE6C78E0004A5BB /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4CE2AE6C78E0004A5BB /* Radius.swift */; };
 		9775E4D12AE6C9EF0004A5BB /* ButtonSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D02AE6C9EF0004A5BB /* ButtonSymbol.swift */; };
 		9775E4D32AE6CAB20004A5BB /* ButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D22AE6CAB20004A5BB /* ButtonImage.swift */; };
+		9775E4D52AE6CC120004A5BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D42AE6CC120004A5BB /* MainView.swift */; };
+		9775E4D92AE6DE5A0004A5BB /* MainCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4D82AE6DE5A0004A5BB /* MainCategoriesView.swift */; };
+		9775E4DB2AE6E08F0004A5BB /* ProductModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4DA2AE6E08F0004A5BB /* ProductModels.swift */; };
+		9775E4DF2AE6E8180004A5BB /* MainCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4DE2AE6E8180004A5BB /* MainCategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9775E4B02AE6C37D0004A5BB /* e-commerce-app-ios17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-commerce-app-ios17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_commerce_app_ios17App.swift; sourceTree = "<group>"; };
 		9775E4B52AE6C37D0004A5BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9775E4B72AE6C37D0004A5BB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9775E4B92AE6C37F0004A5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9775E4C92AE6C75B0004A5BB /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
@@ -31,6 +33,10 @@
 		9775E4CE2AE6C78E0004A5BB /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		9775E4D02AE6C9EF0004A5BB /* ButtonSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSymbol.swift; sourceTree = "<group>"; };
 		9775E4D22AE6CAB20004A5BB /* ButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImage.swift; sourceTree = "<group>"; };
+		9775E4D42AE6CC120004A5BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9775E4D82AE6DE5A0004A5BB /* MainCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoriesView.swift; sourceTree = "<group>"; };
+		9775E4DA2AE6E08F0004A5BB /* ProductModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModels.swift; sourceTree = "<group>"; };
+		9775E4DE2AE6E8180004A5BB /* MainCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,6 @@
 				9775E4C52AE6C7390004A5BB /* ViewModels */,
 				9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */,
 				9775E4B52AE6C37D0004A5BB /* ContentView.swift */,
-				9775E4B72AE6C37D0004A5BB /* Item.swift */,
 				9775E4B92AE6C37F0004A5BB /* Assets.xcassets */,
 				9775E4BB2AE6C37F0004A5BB /* Preview Content */,
 			);
@@ -87,6 +92,7 @@
 		9775E4C52AE6C7390004A5BB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9775E4DE2AE6E8180004A5BB /* MainCategoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -94,6 +100,8 @@
 		9775E4C62AE6C7400004A5BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9775E4D42AE6CC120004A5BB /* MainView.swift */,
+				9775E4D82AE6DE5A0004A5BB /* MainCategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +109,7 @@
 		9775E4C72AE6C7450004A5BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9775E4DA2AE6E08F0004A5BB /* ProductModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,12 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9775E4D12AE6C9EF0004A5BB /* ButtonSymbol.swift in Sources */,
+				9775E4DF2AE6E8180004A5BB /* MainCategoriesViewModel.swift in Sources */,
+				9775E4D92AE6DE5A0004A5BB /* MainCategoriesView.swift in Sources */,
+				9775E4D52AE6CC120004A5BB /* MainView.swift in Sources */,
 				9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */,
 				9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */,
 				9775E4D32AE6CAB20004A5BB /* ButtonImage.swift in Sources */,
 				9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */,
-				9775E4B82AE6C37D0004A5BB /* Item.swift in Sources */,
 				9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */,
+				9775E4DB2AE6E08F0004A5BB /* ProductModels.swift in Sources */,
 				9775E4CF2AE6C78E0004A5BB /* Radius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

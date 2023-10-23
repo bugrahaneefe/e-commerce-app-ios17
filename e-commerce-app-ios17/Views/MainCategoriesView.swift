@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainCategoriesView.swift
 //  e-commerce-app-ios17
 //
 //  Created by Buğrahan Efe on 23.10.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct MainCategoriesView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var productModels: [ProductModels]
 
@@ -52,18 +52,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: ProductModels.self, inMemory: true)
-}
-
-import Foundation
-import SwiftData
-
-@Model
-final class Item {
-    var timestamp: Date
-
-    init(timestamp: Date) {
-        self.timestamp = timestamp
-    }
+    MainCategoriesView().modelContainer(for: ProductModels.self, inMemory: true)
 }

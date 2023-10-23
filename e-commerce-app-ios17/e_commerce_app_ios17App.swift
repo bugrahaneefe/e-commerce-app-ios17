@@ -12,7 +12,7 @@ import SwiftData
 struct e_commerce_app_ios17App: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ProductModels.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -21,6 +21,7 @@ struct e_commerce_app_ios17App: App {
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
+
     }()
 
     var body: some Scene {
