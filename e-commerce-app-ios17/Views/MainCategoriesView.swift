@@ -11,28 +11,52 @@ import SwiftData
 struct MainCategoriesView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var productModels: [ProductModels]
+    @State private var categoryIds: Set<ProductCategoryModels.ID> = []
+    var model = ProductMenuModel()
 
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(productModels) { productModels in
-                        Text("Name: \(productModels.name)")
+            List(model.mainMenuItems, selection: $categoryIds) { employee in
+                    Text(employee.name)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+            } detail: {
+                if let selectedCategoryId = categoryIds.first{
+                    List {
+                        ForEach(model.getSubMenuProducts(topMenu: model.mainMenuItems.first { $0.id == selectedCategoryId }!) ?? []) { product in
+                            Text("Name: \(product.name)")
+                        }
+                        .onDelete(perform: deleteItems)
                     }
+                } else {
+                    Text("Select a category")
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
+//        NavigationSplitView {
+//            List {
+//                ForEach(model.mainMenuItems) { items in
+//                        Text("Name: \(items.name)")
+//                }
+//            }
+//        } content: {
+//            List {
+//                ForEach(productModels) { productModels in
+//                        Text("Name: \(productModels.name)")
+//                }
+//                .onDelete(perform: deleteItems)
+//            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                ToolbarItem {
+//                    Button(action: addItem) {
+//                        Label("Add Item", systemImage: "plus")
+//                    }
+//                }
+//            }
+//        } detail: {
+//            Text("Select an item")
+//        }
     }
 
     private func addItem() {

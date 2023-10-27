@@ -5,9 +5,11 @@
 //  Created by Buğrahan Efe on 23.10.2023.
 //
 
+import Foundation
 import SwiftData
 
-@Model class ProductModels {
+@Model class ProductModels: Identifiable, Hashable {
+    var productID = UUID()
     var name: String
     var imageName: String
     var price: Int
