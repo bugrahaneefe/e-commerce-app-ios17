@@ -12,64 +12,61 @@ struct MainCategoriesView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var productModels: [ProductModels]
     @State private var categoryIds: Set<ProductCategoryModels.ID> = []
-    var model = ProductMenuModel()
+    private let model = ProductMenuModel()
+    var navigationTitle: String {
+            if let selectedCategoryId = categoryIds.first,
+               let selectedCategory = model.mainMenuItems.first(where: { $0.id == selectedCategoryId }) {
+                return selectedCategory.name
+            } else {
+                return "Product Categories"
+            }
+        }
 
     var body: some View {
         NavigationSplitView {
-            List(model.mainMenuItems, selection: $categoryIds) { employee in
-                    Text(employee.name)
-                }
-            } detail: {
-                if let selectedCategoryId = categoryIds.first{
-                    List {
-                        ForEach(model.getSubMenuProducts(topMenu: model.mainMenuItems.first { $0.id == selectedCategoryId }!) ?? []) { product in
-                            Text("Name: \(product.name)")
-                        }
-                        .onDelete(perform: deleteItems)
-                    }
-                } else {
-                    Text("Select a category")
+            List(model.mainMenuItems, selection: $categoryIds) { category in
+                HStack(alignment: .center, spacing: Spacing.spacing_1) {
+                    Image(category.imageName)
+                        .frame(width: 100, height: 50)
+                        .background(.ecLightOrange).ignoresSafeArea()
+                        .padding(.zero)
+                    Text(category.name)
+                        .bold()
                 }
             }
-//        NavigationSplitView {
-//            List {
-//                ForEach(model.mainMenuItems) { items in
-//                        Text("Name: \(items.name)")
-//                }
-//            }
-//        } content: {
-//            List {
-//                ForEach(productModels) { productModels in
-//                        Text("Name: \(productModels.name)")
-//                }
-//                .onDelete(perform: deleteItems)
-//            }
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//                ToolbarItem {
-//                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-//                    }
-//                }
-//            }
-//        } detail: {
-//            Text("Select an item")
-//        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = ProductModels(name: "", imageName: "String", price: 1, rating: 1, isFavorite: true, category: "String", isBuyed: true, buyedQuantity: 1)
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(productModels[index])
+            .navigationTitle("Product Categories")
+            .navigationBarTitleDisplayMode(.large)
+        } detail: {
+            if let selectedCategoryId = categoryIds.first {
+                List {
+                    ForEach(model
+                        .getSubMenuProducts(
+                            topMenu: model
+                                .mainMenuItems
+                                .first { $0.id == selectedCategoryId }!) ?? []) { product in
+                                    NavigationLink {
+                                        Text("Product Detail")
+                                    } label: {
+                                        HStack(spacing: Spacing.spacing_1) {
+                                            Image(product.imageName)
+                                                .resizable()
+                                                .frame(width: 125, height: 150)
+                                            VStack(alignment: .center) {
+                                                Text(product.name)
+                                                    .font(.footnote)
+                                                Spacer()
+                                                Text("\(product.price) TL")
+                                                ButtonText(buttonTitle: "Detail",
+                                                           action: {})
+                                            }
+                                            .padding()
+                                        }
+                                    }
+                                }
+                }
+                .navigationTitle(navigationTitle)
+            } else {
+                Text("None category")
             }
         }
     }
