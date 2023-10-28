@@ -11,5 +11,4 @@ struct ProductCategoryModels: Identifiable, Hashable {
     var id = UUID()
     let name: String
     let imageName: String
-    let subMenuProducts: [ProductModels]?
 }

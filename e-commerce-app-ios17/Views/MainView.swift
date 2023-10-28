@@ -11,7 +11,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             NavigationLink {
-                MainCategoriesView()
+                TabBarView()
                     .navigationBarBackButtonHidden(true)
             } label: {
                 ZStack(alignment: .center) {

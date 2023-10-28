@@ -37,36 +37,41 @@ struct MainCategoriesView: View {
             .navigationTitle("Product Categories")
             .navigationBarTitleDisplayMode(.large)
         } detail: {
-            if let selectedCategoryId = categoryIds.first {
-                List {
-                    ForEach(model
-                        .getSubMenuProducts(
-                            topMenu: model
-                                .mainMenuItems
-                                .first { $0.id == selectedCategoryId }!) ?? []) { product in
-                                    NavigationLink {
-                                        Text("Product Detail")
-                                    } label: {
-                                        HStack(spacing: Spacing.spacing_1) {
-                                            Image(product.imageName)
-                                                .resizable()
-                                                .frame(width: 125, height: 150)
-                                            VStack(alignment: .center) {
-                                                Text(product.name)
-                                                    .font(.footnote)
-                                                Spacer()
-                                                Text("\(product.price) TL")
-                                                ButtonText(buttonTitle: "Detail",
-                                                           action: {})
-                                            }
-                                            .padding()
-                                        }
-                                    }
+            List {
+                ForEach(productModels.filter { $0.category == navigationTitle }) { product in
+                    NavigationLink {
+                        ScrollView {
+                            VStack(alignment: .center, spacing: 25) {
+                                Image(product.imageName)
+                                    .resizable()
+                                Text(product.name)
+                                    .font(.headline)
+                                Text("\(product.price) TL")
+                                    .font(.largeTitle)
+                                ButtonSymbol(buttonTitle: "Buy", buttonSymbol: "basket.fill") {
+                                    product.isBuyed = true
                                 }
+                            }
+                            .padding(.zero)
+                        }
+                        .padding(.zero)
+                    } label: {
+                        HStack(spacing: Spacing.spacing_1) {
+                            Image(product.imageName)
+                                .resizable()
+                                .frame(width: 125, height: 150)
+                            VStack(alignment: .center) {
+                                Text(product.name)
+                                    .font(.footnote)
+                                Spacer()
+                                Text("\(product.price) TL")
+                                ButtonText(buttonTitle: "Detail",
+                                           action: {})
+                            }
+                            .padding()
+                        }
+                    }
                 }
-                .navigationTitle(navigationTitle)
-            } else {
-                Text("None category")
             }
         }
     }

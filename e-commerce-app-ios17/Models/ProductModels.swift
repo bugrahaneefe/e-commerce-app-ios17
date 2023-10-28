@@ -8,8 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model class ProductModels: Identifiable, Hashable {
-    var productID = UUID()
+@Model class ProductModels {
     var name: String
     var imageName: String
     var price: Int
