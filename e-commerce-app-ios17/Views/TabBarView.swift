@@ -20,6 +20,10 @@ struct TabBarView: View {
                     .tabItem {
                         Image(systemName: "cart.fill")
                     }.tag(1)
+                FavoriteView()
+                    .tabItem {
+                        Image(systemName: "heart.fill")
+                    }.tag(2)
             }
         }.accentColor(.ecLightOrange)
     }

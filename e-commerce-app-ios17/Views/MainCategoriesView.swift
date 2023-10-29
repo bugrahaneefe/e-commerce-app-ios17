@@ -12,26 +12,24 @@ struct MainCategoriesView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var productModels: [ProductModels]
     @State private var categoryIds: Set<ProductCategoryModels.ID> = []
+    @State private var productIsFavorite = false
     private let model = ProductMenuModel()
+
     var navigationTitle: String {
-            if let selectedCategoryId = categoryIds.first,
-               let selectedCategory = model.mainMenuItems.first(where: { $0.id == selectedCategoryId }) {
-                return selectedCategory.name
-            } else {
-                return "Product Categories"
-            }
+        if let selectedCategoryId = categoryIds.first,
+           let selectedCategory = model.mainMenuItems.first(where: { $0.id == selectedCategoryId }) {
+            return selectedCategory.name
+        } else {
+            return "Product Categories"
         }
+    }
 
     var body: some View {
         NavigationSplitView {
             List(model.mainMenuItems, selection: $categoryIds) { category in
                 HStack(alignment: .center, spacing: Spacing.spacing_1) {
-                    Image(category.imageName)
-                        .frame(width: 100, height: 50)
-                        .background(.ecLightOrange).ignoresSafeArea()
-                        .padding(.zero)
-                    Text(category.name)
-                        .bold()
+                    ImageCategory(category.imageName)
+                    TextHeadline(category.name)
                 }
             }
             .navigationTitle("Product Categories")
@@ -42,14 +40,19 @@ struct MainCategoriesView: View {
                     NavigationLink {
                         ScrollView {
                             VStack(alignment: .center, spacing: 25) {
-                                Image(product.imageName)
-                                    .resizable()
-                                Text(product.name)
-                                    .font(.headline)
-                                Text("\(product.price) TL")
-                                    .font(.largeTitle)
+                                ImageProductDetail(product.imageName)
+                                TextHeadline(product.name)
+                                TextLarge("\(product.price) TL")
                                 ButtonSymbol(buttonTitle: "Buy", buttonSymbol: "basket.fill") {
                                     product.isBuyed = true
+                                }
+                            }
+                            .toolbar {
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    ButtonFavorite(isFavorite: $productIsFavorite) {
+                                        product.isFavorite.toggle()
+                                        productIsFavorite = product.isFavorite
+                                    }
                                 }
                             }
                             .padding(.zero)
@@ -57,16 +60,14 @@ struct MainCategoriesView: View {
                         .padding(.zero)
                     } label: {
                         HStack(spacing: Spacing.spacing_1) {
-                            Image(product.imageName)
-                                .resizable()
-                                .frame(width: 125, height: 150)
+                            ImageProduct(product.imageName)
                             VStack(alignment: .center) {
-                                Text(product.name)
-                                    .font(.footnote)
+                                TextFootnote(product.name)
                                 Spacer()
-                                Text("\(product.price) TL")
+                                TextFootnote("\(product.price) TL")
                                 ButtonText(buttonTitle: "Detail",
-                                           action: {})
+                                           action: {
+                                })
                             }
                             .padding()
                         }
@@ -77,6 +78,6 @@ struct MainCategoriesView: View {
     }
 }
 
-#Preview {
-    MainCategoriesView().modelContainer(for: ProductModels.self, inMemory: true)
-}
+//#Preview {
+//    MainCategoriesView().modelContainer(for: ProductModels.self, inMemory: true)
+//}

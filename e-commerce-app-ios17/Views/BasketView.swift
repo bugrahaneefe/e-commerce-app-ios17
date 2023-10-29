@@ -11,39 +11,32 @@ import SwiftData
 struct BasketView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var productModels: [ProductModels]
-    private let model = ProductMenuModel()
 
     var body: some View {
         VStack {
+            TextLarge("Basket")
             ScrollView {
-                VStack {
-                    List {
-
+                VStack(spacing: 30) {
+                    ForEach(productModels.filter { $0.isBuyed == true }) { product in
+                        HStack(spacing: 25) {
+                            VStack {
+                                ImageCapsule(product.imageName)
+                                ButtonSymbol(buttonTitle: "", buttonSymbol: "trash") {
+                                    product.isBuyed = false
+                                }
+                            }
+                            VStack(spacing: 5) {
+                                TextHeadline(product.name)
+                                TextLarge("\(product.price) TL")
+                            }
+                        }
                     }
                 }
-                }
             }
-//            HStack(alignment: .top, spacing: 63) {
-//                VStack(alignment: .leading, spacing: 4) {
-//                    // MARK: Total Text View
-//                    TotalText()
-//                }
-//                .padding(.leading, 0)
-//                .padding(.trailing, 70)
-//                .padding(.vertical, 0)
-//                VStack(alignment: .leading, spacing: 4) {
-//                    // MARK: Total Amount Text View
-//                    TotalAmountText(totalAmount: totalAmount)
-//                }
-//                .padding(.leading, 0)
-//                .padding(.trailing, 70)
-//                .padding(.vertical, 0)
-//            }
-//            .padding(.horizontal, 16)
-//            .padding(.top, 24)
-//            .padding(.bottom, 16)
         }
     }
+}
+
 
 #Preview {
     BasketView()
