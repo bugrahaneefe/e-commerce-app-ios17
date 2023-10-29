@@ -15,7 +15,6 @@
 		977108A32AEE99230018B40B /* TextFootnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977108A22AEE99230018B40B /* TextFootnote.swift */; };
 		977108A52AEE994B0018B40B /* TextLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977108A42AEE994B0018B40B /* TextLarge.swift */; };
 		9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */; };
-		9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4B52AE6C37D0004A5BB /* ContentView.swift */; };
 		9775E4BA2AE6C37F0004A5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4B92AE6C37F0004A5BB /* Assets.xcassets */; };
 		9775E4BD2AE6C37F0004A5BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */; };
 		9775E4CA2AE6C75B0004A5BB /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9775E4C92AE6C75B0004A5BB /* ButtonText.swift */; };
@@ -44,7 +43,6 @@
 		977108A42AEE994B0018B40B /* TextLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLarge.swift; sourceTree = "<group>"; };
 		9775E4B02AE6C37D0004A5BB /* e-commerce-app-ios17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-commerce-app-ios17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_commerce_app_ios17App.swift; sourceTree = "<group>"; };
-		9775E4B52AE6C37D0004A5BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9775E4B92AE6C37F0004A5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9775E4BC2AE6C37F0004A5BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9775E4C92AE6C75B0004A5BB /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				9775E4C62AE6C7400004A5BB /* Views */,
 				9775E4C52AE6C7390004A5BB /* ViewModels */,
 				9775E4B32AE6C37D0004A5BB /* e_commerce_app_ios17App.swift */,
-				9775E4B52AE6C37D0004A5BB /* ContentView.swift */,
 				9775E4B92AE6C37F0004A5BB /* Assets.xcassets */,
 				9775E4BB2AE6C37F0004A5BB /* Preview Content */,
 			);
@@ -270,7 +267,6 @@
 				9771089E2AEE988C0018B40B /* ImageCapsule.swift in Sources */,
 				9771089C2AEE97F10018B40B /* ImageProduct.swift in Sources */,
 				9771089A2AEE978A0018B40B /* ImageProductDetail.swift in Sources */,
-				9775E4B62AE6C37D0004A5BB /* ContentView.swift in Sources */,
 				9775E4D32AE6CAB20004A5BB /* ButtonImage.swift in Sources */,
 				9775E4CD2AE6C7850004A5BB /* Spacing.swift in Sources */,
 				9775E4B42AE6C37D0004A5BB /* e_commerce_app_ios17App.swift in Sources */,
